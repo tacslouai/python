@@ -1,5 +1,4 @@
 import turtle as trtl
-#import pygame
 
 wn = trtl.Screen()
 xpos = -600
@@ -22,7 +21,7 @@ while(True):
     crewmate.goto(xpos, 0)
     xpos += 1
 
-    if(crewmate.xcor() == -10):
+    if(crewmate.xcor() == 0):
         text.color('white')
         style = ('Arial', 25)
         text.write(message, font = style, align = 'center')
@@ -31,10 +30,5 @@ while(True):
     if(crewmate.xcor() >= 540):
         crewmate.hideturtle()
         break
-
-
-    
-
-
 
 wn.mainloop()

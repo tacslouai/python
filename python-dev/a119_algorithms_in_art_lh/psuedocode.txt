@@ -1,0 +1,33 @@
+Import Turtle Module
+
+Init screen object, crewmate x position, text string
+Set screen size to dimensions of picture
+Set background to the indicated picture
+Import custom crewmate turtle shape
+Create text turtle
+Hide text turtle from view
+
+Set crewmate turtle speed to move instantaniously
+Stop crewmate turtle from drawing
+Hide crewmate turtle from view
+
+Transport crewmate turtle to left end of the screen
+Bring crewmate turtle back into view
+
+General loop:
+    Transport crewmate turtle to incremented x position
+    Increment x position by 1
+
+    If the crewmate turtle's x position = -10:
+        Set text turtle color to white
+        Set style to Arial font at size 25
+        Display the contents of the message string and align text
+        Hide text turtle from view
+
+    If the crewmate turtle's x position >= 540:
+        Hide crewmate turtle from view
+        Break out of the loop
+
+Loop window
+
+
