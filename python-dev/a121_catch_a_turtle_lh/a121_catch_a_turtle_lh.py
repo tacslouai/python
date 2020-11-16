@@ -9,7 +9,7 @@ import leaderboard as lb
 leaderboard_file_name = "a122_leaderboard.txt"
 leader_names_list = []
 leader_scores_list = []
-player_name = input("What is your name?")
+player_name = input("What is your name? ")
 
 turt_color = 'darkgreen'
 turt_size = 5
@@ -89,6 +89,7 @@ def manage_leaderboard():
 
     global leader_scores_list
     global leader_names_list
+    global leaderboard_file_name
     global score
     global turt
 

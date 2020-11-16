@@ -1,0 +1,5 @@
+nut,28
+duck,19
+suck,10
+gudenheim, 2
+master, 1
