@@ -2,9 +2,9 @@ import time, random
 
 def main():
     cookies = 0
-    coinpos = ['heads', 'tails']
+    coinpos = ['h', 't']
     coin = ' '
-
+    points = 1
     while(True):
         u_time = time.time()
         seed = int(u_time * 1000)
@@ -19,22 +19,37 @@ def main():
         print("Guess which side it landed on! (h for Heads/t for Tails)")
         user_choice = input()
 
-        if(user_choice == coin):
+        if(user_choice.lower() == 'h' and coin == 'h'):
             print("Congrats! You got it right!")
             print("Here's a cookie, you deserve it")
-            print("+1 Cookie")
-            cookies += 1
+            print("+", 2*points, "Cookies")
+            cookies += 2*points
+
+            print("You currently have", cookies, "cookies")
+
+        elif(user_choice.lower() == 't' and coin == 't'):
+            print("Congrats! You got it right!")
+            print("Here's a cookie, you deserve it")
+            print("+", 2*points, "Cookie")
+            cookies += 2*points
             
             print("You currently have", cookies, "cookies")
 
-        elif(user_choice != coin):
+        elif(user_choice.lower() == 'h' and coin == 't'):
             print("Damn bro... you got it wrong")
             print("Sorry to do this to you but...")
-            print("-1 Cookie")
-            cookies -= 1
+            print("-", points, "Cookie"),
+            cookies -= points
             print("You currently have", cookies, "cookies")
 
-        elif(user_choice == 'q' or user_choice == 'Q'):
+        elif(user_choice.lower() == 't' and coin == 'h'):
+            print("Damn bro... you got it wrong")
+            print("Sorry to do this to you but...")
+            print("-", points, "Cookie")
+            cookies -= points
+            print("You currently have", cookies, "cookies")
+
+        elif(user_choice.lower() == 'q'):
             return 0
             
         else:
