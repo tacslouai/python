@@ -5,6 +5,7 @@ def main():
     coinpos = ['h', 't']
     coin = ' '
     points = 1
+    #TODO: Add upgrades list and functionality
     while(True):
         u_time = time.time()
         seed = int(u_time * 1000)
@@ -70,8 +71,6 @@ def main():
                 print("Invalid Input!")
                 invalid = True
 '''
-    
-        
-        
+
 
 main()
